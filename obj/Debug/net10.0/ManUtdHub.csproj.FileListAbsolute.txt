@@ -95,4 +95,13 @@ C:\Users\cahir\codebase\ManUtdHub\obj\Debug\net10.0\refint\ManUtdHub.dll
 C:\Users\cahir\codebase\ManUtdHub\obj\Debug\net10.0\ManUtdHub.pdb
 C:\Users\cahir\codebase\ManUtdHub\obj\Debug\net10.0\ManUtdHub.genruntimeconfig.cache
 C:\Users\cahir\codebase\ManUtdHub\obj\Debug\net10.0\ref\ManUtdHub.dll
-C:\Users\cahir\codebase\ManUtdHub\obj\Debug\net10.0\compressed\st72rufb0l-{0}-05wqvdjf66-05wqvdjf66.gz
+C:\Users\cahir\AppData\Local\Temp\ManUtdHub-build\appsettings.Development.json
+C:\Users\cahir\AppData\Local\Temp\ManUtdHub-build\appsettings.json
+C:\Users\cahir\AppData\Local\Temp\ManUtdHub-build\ManUtdHub.staticwebassets.runtime.json
+C:\Users\cahir\AppData\Local\Temp\ManUtdHub-build\ManUtdHub.staticwebassets.endpoints.json
+C:\Users\cahir\AppData\Local\Temp\ManUtdHub-build\ManUtdHub.exe
+C:\Users\cahir\AppData\Local\Temp\ManUtdHub-build\ManUtdHub.deps.json
+C:\Users\cahir\AppData\Local\Temp\ManUtdHub-build\ManUtdHub.runtimeconfig.json
+C:\Users\cahir\AppData\Local\Temp\ManUtdHub-build\ManUtdHub.dll
+C:\Users\cahir\AppData\Local\Temp\ManUtdHub-build\ManUtdHub.pdb
+C:\Users\cahir\codebase\ManUtdHub\obj\Debug\net10.0\compressed\st72rufb0l-{0}-kzmxs2gd3g-kzmxs2gd3g.gz

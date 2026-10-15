@@ -1,3 +1,5 @@
+@using ManUtdHub.ViewModels
+@model ResultsViewModel;
 @{
     ViewData["Title"] = "Results Page";
 }
@@ -8,56 +10,85 @@
         <div class = "card-header">
             <div class="row align-items-start">
                 <div class="col">
-                    <i class="fa-solid fa-angle-left monthNav"></i>
+                  <a asp-action="Index"
+   asp-route-month="@(Model.Month == 1 ? 12 : Model.Month - 1)"
+   asp-route-year="@(Model.Month == 1 ? Model.Year - 1 : Model.Year)">
+    <i class="fa-solid fa-angle-left"></i>
+</a>
                 </div>
                 <div class="col text-center fw-semibold ">
-                     October 2026
+                     @Model.MonthName
                 </div>
                 <div class="col text-end">
-                    <i class="fa-solid fa-angle-right monthNav"></i>
+                    <a asp-action="Index"
+   asp-route-month="@(Model.Month == 12 ? 1 : Model.Month + 1)"
+   asp-route-year="@(Model.Month == 12 ? Model.Year + 1 : Model.Year)">
+    <i class="fa-solid fa-angle-right"></i>
+</a>
                 </div>
              </div>
     </div>
 </div>
 </div>
 <div class="row mt-4">
-    <div class="card">
+    @if (!Model.Matches.Any())
+    {
+        <div class="card">
+            <div class = "card-body">
+                 <div class="col text-center fw-semibold">
+            No matches found for this month.
+        </div>
+            </div>
+        </div>
+    }
+    else
+    {
+      @foreach (var result in Model.Matches)
+    {
+        <div class="col-md-4">
+        <div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col text-center fw-semibold">
-                    20th October 2026 - 4:30pm
+                    @result.MatchDate.ToString("d MMMM yyyy") - @result.MatchDate.ToString("h:mm tt")
                 </div>
             </div>
             <div class="row mt-1">
                 <div class="col text-center fw-semibold">
-                    Premier League
+                    @result.Competition
                 </div>
             </div>
              <div class="row mt-1">
                 <div class="col text-center fw-normal">
-                    Old Trafford, Manchester
+                    @result.Stadium, @result.City
                 </div>
             </div>
             <div class= "row mt-3">
                 <div class="col-md-4 text-center">
-                    <img src="../images/Manchester_United_FC_crest.png" class="rounded logo" alt="...">
+                    <img src="@result.HomeTeamLogo" class="rounded logo" alt="...">
                 </div>
-                <div class="col-md-4 d-flex justify-content-center display-2 align-items-center"> <h1 class="fw-semibold mb-0 display-2">2 - 1</h1> </div>
+                <div class="col-md-4 d-flex justify-content-center display-2 align-items-center fw-semibold mb-0 display-2 scoreText"> @result.HomeScore - @result.AwayScore </div>
                 <div class="col-md-4 text-center">
-                    <img src="../images/Liverpool-FC-logo-PNG-transparent-1024x1871.png" class="rounded logo" alt="...">
+                    <img src="@result.AwayTeamLogo" class="rounded logo" alt="...">
                 </div>
             </div>
             <div class= "row mt-3">
-                <div class="col-md-4 text-center">
-                    <h2 class="text-center fw-semibold">Manchester United</h2>
+                <div class="col-md-4 text-center
+                    text-center fw-semibold">@result.HomeTeam
                 </div>
                 <div class="col-md-4 text-center">
                     </div>
                     
-                <div class="col-md-4 text-center">
-                    <h2 class="text-center fw-semibold">Liverpool</h2>
+                <div class="col-md-4 text-center
+                    text-center fw-semibold">@result.AwayTeam
                 </div>
             </div>
         </div>
     </div>
+        </div>
+    }   
+    }
 </div>
+<script>
+    
+</script>

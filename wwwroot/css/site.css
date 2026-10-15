@@ -43,6 +43,12 @@ body {
   color: #2196f3;
 }
 .logo {
-  height: 200px;
+  height: 100px;
   opacity: 0.8;
+}
+.comText {
+  font-size: 15px;
+}
+.scoreText {
+  font-size: 25px;
 }
